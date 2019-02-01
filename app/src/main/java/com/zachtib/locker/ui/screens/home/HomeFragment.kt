@@ -5,7 +5,7 @@ import com.zachtib.locker.R
 import com.zachtib.locker.framework.ui.FragmentView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeScreen : FragmentView(R.layout.fragment_home) {
+class HomeFragment : FragmentView(R.layout.fragment_home) {
 
     val viewModel by viewModel<HomeViewModel>()
 

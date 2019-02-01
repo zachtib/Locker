@@ -7,7 +7,7 @@
 
     <fragment
             android:id="@+id/homeScreen"
-            android:name="com.zachtib.locker.ui.screens.home.HomeScreen"
+            android:name="com.zachtib.locker.ui.screens.home.HomeFragment"
             android:label="Locker"
             tools:layout="@layout/fragment_home"/>
 </navigation>
