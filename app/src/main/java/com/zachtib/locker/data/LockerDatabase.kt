@@ -11,8 +11,7 @@ abstract class LockerDatabase : RoomDatabase() {
         private const val DATABASE_NAME = "locker-db"
 
         fun build(context: Context): LockerDatabase {
-            return Room.databaseBuilder(context, LockerDatabase::class.java, DATABASE_NAME)
-                .build()
+            return Room.databaseBuilder(context, LockerDatabase::class.java, DATABASE_NAME).build()
         }
     }
 }
