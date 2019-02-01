@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nav_graph.xml">
+            android:id="@+id/nav_graph.xml"
+            app:startDestination="@id/homeScreen"
+            xmlns:tools="http://schemas.android.com/tools">
 
+    <fragment
+            android:id="@+id/homeScreen"
+            android:name="com.zachtib.locker.ui.screens.home.HomeScreen"
+            android:label="Locker"
+            tools:layout="@layout/fragment_home"/>
 </navigation>
