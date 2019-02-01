@@ -11,12 +11,13 @@ sealed class Option<out A> {
     object None : Option<Nothing>() {
         override fun isEmpty() = true
     }
+
     data class Some<out A>(val value: A) : Option<A>() {
         override fun isEmpty() = false
     }
 
-    fun <B> map(f: (A) -> B): Option<B> = when(this) {
+    inline fun <B> map(f: (A) -> B): Option<B> = when(this) {
         is Some -> Option.Some(f(this.value))
-        None -> this
+        None -> this as None
     }
 }
