@@ -9,5 +9,12 @@
             android:id="@+id/homeScreen"
             android:name="com.zachtib.locker.ui.screens.home.HomeFragment"
             android:label="Locker"
-            tools:layout="@layout/fragment_home"/>
+            tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeScreen_to_cameraFragment" app:destination="@id/cameraFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/cameraFragment"
+              android:name="com.zachtib.locker.ui.screens.camera.CameraFragment"
+              android:label="CameraFragment"
+              tools:layout="@layout/fragment_camera"/>
 </navigation>
