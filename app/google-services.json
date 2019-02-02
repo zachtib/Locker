@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "893269001014",
+    "firebase_url": "https://locker-4b2aa.firebaseio.com",
+    "project_id": "locker-4b2aa",
+    "storage_bucket": "locker-4b2aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893269001014:android:52f7b6085473d812",
+        "android_client_info": {
+          "package_name": "com.zachtib.locker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893269001014-anrbr2m69j45g5a70oh6v75a6o9eoan7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc4R9akn3dqMNHT1gyefBmHYzqcoauEKU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

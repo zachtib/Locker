@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 abstract class FragmentView(@LayoutRes private val layoutId: Int) : Fragment(), CoroutineScope {
 
@@ -22,5 +23,13 @@ abstract class FragmentView(@LayoutRes private val layoutId: Int) : Fragment(), 
     override fun onDestroy() {
         super.onDestroy()
         job.cancel()
+    }
+
+    protected fun View.onClick(listener: suspend () -> Unit) {
+        this.setOnClickListener {
+            launch {
+                listener()
+            }
+        }
     }
 }

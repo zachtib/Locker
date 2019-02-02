@@ -29,9 +29,10 @@ dependencies {
     final coroutines_version = '1.0.0'
     final firebase_core_version = '16.0.6'
     final fire_mlv_version = '18.0.2'
+    final fire_mlv_label_version = '17.0.2'
     final fragment_ktx__version = '1.0.0'
     final koin_version = '1.0.2'
-    final jpegkit_version = '0.2.1'
+    final jpegkit_version = '0.1.0'
     final lifecycle_version = '2.0.0'
     final material_version = '1.0.0'
     final nav_version = '1.0.0-alpha11'
@@ -41,6 +42,8 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutines_version"
 
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.core:core-ktx:$corektx_version"
@@ -55,6 +58,7 @@ dependencies {
 
     implementation "com.google.firebase:firebase-core:$firebase_core_version"
     implementation "com.google.firebase:firebase-ml-vision:$fire_mlv_version"
+    implementation "com.google.firebase:firebase-ml-vision-image-label-model:$fire_mlv_label_version"
 
     implementation "com.camerakit:camerakit:$camerakit_version"
     implementation "com.camerakit:jpegkit:$jpegkit_version"
@@ -76,3 +80,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
