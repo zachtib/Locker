@@ -2,14 +2,12 @@ package com.zachtib.locker.ui.screens.home
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
-import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
 import com.google.firebase.ml.vision.label.FirebaseVisionLabel
 import com.zachtib.locker.R
 import com.zachtib.locker.framework.ui.FragmentView
@@ -17,7 +15,6 @@ import com.zachtib.locker.framework.ui.SimpleListAdapter
 import com.zachtib.locker.ui.screens.camera.CameraViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.tasks.asDeferred
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.text.DecimalFormat
 
