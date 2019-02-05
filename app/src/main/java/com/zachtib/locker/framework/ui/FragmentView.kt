@@ -5,6 +5,8 @@ import android.view.*
 import androidx.annotation.LayoutRes
 import androidx.annotation.MenuRes
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -34,6 +36,14 @@ abstract class FragmentView(
     override fun onDestroy() {
         super.onDestroy()
         job.cancel()
+    }
+
+    fun <T> LiveData<T>.observe(observer: suspend (T) -> Unit) {
+        this.observe(this@FragmentView, Observer { item ->
+            launch {
+                observer(item)
+            }
+        })
     }
 
     protected fun View.onClick(listener: suspend () -> Unit) {
