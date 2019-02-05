@@ -8,5 +8,10 @@ import org.koin.dsl.module.module
 val appModule = module {
     single { LockerDatabase.build(get())}
 
+    single {
+        val db: LockerDatabase = get()
+        db.notesDao()
+    }
+
     viewModel { NotesListViewModel(get()) }
 }
