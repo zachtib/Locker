@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_note_black_24dp"
+            android:id="@+id/noteIcon" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteNameTextView" tools:text="My Note Name"
+            app:layout_constraintTop_toTopOf="@+id/noteIcon" app:layout_constraintBottom_toBottomOf="@+id/noteIcon"
+            app:layout_constraintStart_toEndOf="@+id/noteIcon" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateCreatedTextView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/noteIcon" app:layout_constraintStart_toStartOf="@+id/noteIcon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" tools:text="2/1/2019"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/collectionNameTextView"
+            app:layout_constraintTop_toTopOf="@+id/dateCreatedTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/dateCreatedTextView"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" tools:text="Collection"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tagsTextView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/dateCreatedTextView"
+            app:layout_constraintStart_toStartOf="@+id/dateCreatedTextView"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" tools:text="all, my, tags"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
