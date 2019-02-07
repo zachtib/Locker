@@ -1,4 +1,4 @@
-package com.zachtib.locker.ui.screens.home
+package com.zachtib.locker.ui.home
 
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController

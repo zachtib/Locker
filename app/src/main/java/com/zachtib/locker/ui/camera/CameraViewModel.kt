@@ -1,4 +1,4 @@
-package com.zachtib.locker.ui.screens.camera
+package com.zachtib.locker.ui.camera
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

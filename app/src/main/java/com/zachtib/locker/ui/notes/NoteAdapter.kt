@@ -1,4 +1,4 @@
-package com.zachtib.locker.ui.screens
+package com.zachtib.locker.ui.notes
 
 import android.view.View
 import android.view.ViewGroup
