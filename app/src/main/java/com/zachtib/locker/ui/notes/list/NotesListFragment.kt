@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.zachtib.locker.R
 import com.zachtib.locker.framework.ui.FragmentView
 import com.zachtib.locker.models.Note
-import com.zachtib.locker.ui.screens.NoteAdapter
+import com.zachtib.locker.ui.notes.NoteAdapter
 import kotlinx.android.synthetic.main.fragment_generic_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
