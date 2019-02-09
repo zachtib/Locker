@@ -16,5 +16,5 @@ interface NotesDao {
     fun liveGetAll(): LiveData<List<Note>>
 
     @Insert
-    fun insert(note: Note)
+    suspend fun insert(note: Note): Long
 }

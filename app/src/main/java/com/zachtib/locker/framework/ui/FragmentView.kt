@@ -11,6 +11,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 abstract class FragmentView(
     @LayoutRes private val layoutId: Int,
@@ -18,6 +19,7 @@ abstract class FragmentView(
 ) : Fragment(), CoroutineScope {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        Timber.d("Starting ${this.javaClass.simpleName}")
         val view = inflater.inflate(layoutId, container, false)
         setHasOptionsMenu(menuId != null)
         return view

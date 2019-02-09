@@ -1,28 +1,21 @@
 package com.zachtib.locker.ui.notes.list
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.zachtib.locker.data.NotesDao
-import com.zachtib.locker.framework.dataclasses.Resource
+import com.zachtib.locker.data.NotesRepository
 import com.zachtib.locker.framework.ui.CoroutineViewModel
-import com.zachtib.locker.models.Note
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class NotesListViewModel(
-    private val notesDao: NotesDao
+    private val repository: NotesRepository
 ) : CoroutineViewModel() {
 
-    private val _notes = MutableLiveData<Resource<List<Note>>>()
+    val notes = repository.notes
 
-    val notes = _notes as LiveData<Resource<List<Note>>>
-
-    init {
-        _notes.value = Resource.Loading
+    // TODO
+    fun createNote() {
         launch {
-            val result = async(Dispatchers.IO) { notesDao.getAll() }
-            _notes.postValue(Resource.Content(result.await()))
+            Timber.d("Creating a test note")
+            repository.createNote("Test", "Test test test")
         }
     }
 }
