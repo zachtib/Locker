@@ -24,6 +24,8 @@
               tools:layout="@layout/fragment_generic_list">
         <action android:id="@+id/action_notesListFragment_to_noteDetailFragment"
                 app:destination="@id/noteDetailFragment"/>
+        <action android:id="@+id/action_notesListFragment_to_noteEditorFragment"
+                app:destination="@id/noteEditorFragment"/>
     </fragment>
     <fragment android:id="@+id/visionTestFragment" android:name="com.zachtib.locker.ui.mltest.VisionTestFragment"
               android:label="VisionTestFragment">
@@ -31,6 +33,10 @@
     </fragment>
     <fragment android:id="@+id/noteDetailFragment" android:name="com.zachtib.locker.ui.notes.detail.NoteDetailFragment"
               android:label="NoteDetailFragment">
+        <argument android:name="noteId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+    <fragment android:id="@+id/noteEditorFragment" android:name="com.zachtib.locker.ui.notes.editor.NoteEditorFragment"
+              android:label="NoteEditorFragment">
         <argument android:name="noteId" app:argType="integer" android:defaultValue="0"/>
     </fragment>
 </navigation>

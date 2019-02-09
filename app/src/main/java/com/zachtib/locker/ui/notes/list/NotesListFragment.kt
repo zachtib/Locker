@@ -30,7 +30,7 @@ class NotesListFragment : FragmentView(R.layout.fragment_generic_list) {
         }
 
         addButton.onClick {
-            viewModel.createNote()
+            findNavController().navigate(R.id.action_notesListFragment_to_noteEditorFragment)
         }
     }
 
