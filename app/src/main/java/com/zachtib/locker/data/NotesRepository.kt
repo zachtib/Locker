@@ -8,6 +8,8 @@ class NotesRepository(private val dao: NotesDao) {
         dao.liveGetAll()
     }
 
+    suspend fun getNote(id: Int) = dao.getNote(id)
+
     suspend fun createNote(title: String, content: String): Note {
         val newNote = Note(title = title, content = content)
         val id = dao.insert(newNote)

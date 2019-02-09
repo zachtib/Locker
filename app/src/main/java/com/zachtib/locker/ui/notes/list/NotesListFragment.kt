@@ -1,7 +1,9 @@
 package com.zachtib.locker.ui.notes.list
 
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zachtib.locker.R
 import com.zachtib.locker.framework.ui.FragmentView
@@ -12,7 +14,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class NotesListFragment : FragmentView(R.layout.fragment_generic_list) {
     private val viewModel: NotesListViewModel by viewModel()
-    private val noteAdapter: NoteAdapter = NoteAdapter()
+    private val noteAdapter = NoteAdapter(this::onNoteClick)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -30,6 +32,14 @@ class NotesListFragment : FragmentView(R.layout.fragment_generic_list) {
         addButton.onClick {
             viewModel.createNote()
         }
+    }
+
+    private fun onNoteClick(note: Note) {
+        findNavController()
+            .navigate(
+                R.id.action_notesListFragment_to_noteDetailFragment,
+                bundleOf("noteId" to note.id)
+            )
     }
 
     private fun showLoading() {

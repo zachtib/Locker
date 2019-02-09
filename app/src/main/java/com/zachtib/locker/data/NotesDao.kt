@@ -2,6 +2,7 @@ package com.zachtib.locker.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.zachtib.locker.models.Note
@@ -17,4 +18,10 @@ interface NotesDao {
 
     @Insert
     suspend fun insert(note: Note): Long
+
+    @Query("SELECT * FROM Note WHERE id=:id")
+    suspend fun getNote(id: Int): Note
+
+    @Delete
+    suspend fun delete(note: Note)
 }
