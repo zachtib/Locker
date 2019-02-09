@@ -1,4 +1,4 @@
-package com.zachtib.locker.ui.screens.camera
+package com.zachtib.locker.ui.camera
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

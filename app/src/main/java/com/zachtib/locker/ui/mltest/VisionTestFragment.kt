@@ -12,7 +12,7 @@ import com.google.firebase.ml.vision.label.FirebaseVisionLabel
 import com.zachtib.locker.R
 import com.zachtib.locker.framework.ui.FragmentView
 import com.zachtib.locker.framework.ui.SimpleListAdapter
-import com.zachtib.locker.ui.screens.camera.CameraViewModel
+import com.zachtib.locker.ui.camera.CameraViewModel
 import kotlinx.android.synthetic.main.fragment_generic_list.*
 import kotlinx.coroutines.tasks.asDeferred
 import java.text.DecimalFormat

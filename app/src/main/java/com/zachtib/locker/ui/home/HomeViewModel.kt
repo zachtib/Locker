@@ -1,4 +1,4 @@
-package com.zachtib.locker.ui.screens.home
+package com.zachtib.locker.ui.home
 
 import com.zachtib.locker.framework.ui.CoroutineViewModel
 
